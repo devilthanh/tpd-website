@@ -25,7 +25,7 @@ const Navbar = () => {
                         className="w-12"
                       />
                     </span>
-                    <span>TPD</span>
+                    <span>TPDigital</span>
                   </span>
                 </Link>
 

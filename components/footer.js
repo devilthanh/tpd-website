@@ -24,7 +24,7 @@ export default function Footer() {
                   height="32"
                   className="w-8"
                 />
-                <span>TPD</span>
+                <span>TPDigital</span>
               </Link>
             </div>
 
