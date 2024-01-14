@@ -1,26 +1,23 @@
-import Head from "next/head";
-import Hero from "../components/hero";
-import Navbar from "../components/navbar";
-import SectionTitle from "../components/sectionTitle";
+import Head from 'next/head'
+import Hero from '../components/hero'
+import Navbar from '../components/navbar'
+import SectionTitle from '../components/sectionTitle'
 
-import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
-import Benefits from "../components/benefits";
-import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
-import Faq from "../components/faq";
-import PopupWidget from "../components/popupWidget";
+import { benefitOne, benefitTwo } from '../components/data'
+import Video from '../components/video'
+import Benefits from '../components/benefits'
+import Footer from '../components/footer'
+import Testimonials from '../components/testimonials'
+import Cta from '../components/cta'
+import Faq from '../components/faq'
+import PopupWidget from '../components/popupWidget'
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
-        <meta
-          name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
-        />
+        <title>Thien Phu Digital</title>
+        <meta name="description" content="Thien Phu Digital " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -55,7 +52,7 @@ const Home = () => {
       <Footer />
       <PopupWidget />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,10 +1,10 @@
-import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
-import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
+import Link from 'next/link'
+import ThemeChanger from './DarkSwitch'
+import Image from 'next/image'
+import { Disclosure } from '@headlessui/react'
 
 const Navbar = () => {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = ['Product', 'Features', 'Pricing', 'Company', 'Blog']
 
   return (
     <div className="w-full">
@@ -18,7 +18,7 @@ const Navbar = () => {
                   <span className="flex items-center space-x-2 text-3xl font-bold text-gray-500 dark:text-gray-100">
                     <span>
                       <Image
-                        src="/img/logo.svg"
+                        src="/img/logo.jpg"
                         alt="N"
                         width="48"
                         height="48"
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
