@@ -37,13 +37,13 @@ const Home = () => {
         Trong 10 năm, phấn đấu trở thành một công ty Công nghệ thông tin uy tín tại Việt Nam với 200 nhân viên và doanh thu đạt 500 tỷ Đồng.
       </SectionTitle>
       <Benefits imgPos="right" data={benefitTwo} />
-      <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
+      {/* <Testimonials /> */}
+      {/* <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
-      </SectionTitle>
-      <Faq />
-      <Cta />
+      </SectionTitle> */}
+      {/* <Faq /> */}
+      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>

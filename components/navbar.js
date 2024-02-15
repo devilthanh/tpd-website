@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
 
 const Navbar = () => {
-  const navigation = ['About', 'Projects', 'Company', 'Blog']
+  const navigation = ['Thư ngỏ', 'Sứ mệnh', 'Tầm nhìn', 'Liên hệ']
 
   return (
     <div className="w-full">
