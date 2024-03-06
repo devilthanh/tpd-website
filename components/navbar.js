@@ -2,10 +2,9 @@ import Link from 'next/link'
 import ThemeChanger from './DarkSwitch'
 import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
+import { navigation } from './navigation'
 
 const Navbar = () => {
-  const navigation = ['Thư ngỏ', 'Sứ mệnh', 'Tầm nhìn', 'Liên hệ']
-
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
@@ -59,10 +58,11 @@ const Navbar = () => {
                     {navigation.map((item, index) => (
                       <Link
                         key={index}
-                        href="/"
+                        href={`#${item.path}`}
+                        scroll={false}
                         className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     ))}
                     <Link
@@ -84,10 +84,11 @@ const Navbar = () => {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link
-                  href="/"
+                  href={`#${menu.path}`}
+                  scroll={false}
                   className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
                 >
-                  {menu}
+                  {menu.label}
                 </Link>
               </li>
             ))}
@@ -95,13 +96,6 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link
-            href="/"
-            className="px-6 py-2 text-white bg-yellow-600 rounded-md md:ml-5"
-          >
-            Login
-          </Link>
-
           <ThemeChanger />
         </div>
       </nav>

@@ -28,11 +28,13 @@ const Home = () => {
       <Letter data={benefitOne} />
       <SectionTitle
         title="Sứ mệnh"
+        id="su-menh"
       >
         Đem các sản phẩm và dịch vụ công nghệ chất lượng cao tới khách hàng, cộng đồng và xã hội. Góp phần tích cực vào sự phát triển chung của nền khoa học và công nghệ tại Việt Nam.
       </SectionTitle>
       <SectionTitle
         title="Tầm nhìn"
+        id="tam-nhin"
       >
         Trong 10 năm, phấn đấu trở thành một công ty Công nghệ thông tin uy tín tại Việt Nam với 200 nhân viên và doanh thu đạt 500 tỷ Đồng.
       </SectionTitle>
