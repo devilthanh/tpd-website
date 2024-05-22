@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="hero" className="w-full pt-16 pb-24">
+    <section id="hero" className="w-full pt-16 pb-24 mt-20">
       <Container className="flex flex-col items-center md:flex-row max-w-7xl md:gap-x-8 mx-auto px-8">
         <motion.div
           className="w-full"
