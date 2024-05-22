@@ -3,10 +3,11 @@ import Hero from '@/components/sections/hero';
 import Navbar from '@/components/headers/navbar';
 import SectionTitle from '@/components/common/sectionTitle';
 import { benefitOne, benefitTwo } from '@/constants/data';
-import Footer from '@/components/sections/footer';
 import PopupWidget from '@/components/popupWidget';
 import Letter from '@/components/sections/letter';
 import Benefits from '@/components/sections/benefits';
+import Solution from '@/components/sections/solution';
+import Contact from '@/components/sections/contact';
 
 const Home = () => {
   return (
@@ -47,14 +48,8 @@ const Home = () => {
         </SectionTitle>
       </section>
       <Benefits imgPos="right" data={benefitTwo} />
-      {/* <Testimonials /> */}
-      {/* <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
-      </SectionTitle> */}
-      {/* <Faq /> */}
-      {/* <Cta /> */}
-      <Footer />
+      <Solution />
+      <Contact />
       <PopupWidget />
     </>
   );

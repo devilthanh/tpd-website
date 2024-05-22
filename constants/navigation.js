@@ -1,18 +1,18 @@
 export const navigation = [
   {
-    label: 'Thư ngỏ',
-    path: 'thu-ngo'
+    label: 'Giới thiệu',
+    path: 'letter',
   },
   {
-    label: 'Sứ mệnh',
-    path: 'su-menh'
+    label: 'Giải pháp',
+    path: 'solution',
   },
   {
-    label: 'Tầm nhìn',
-    path: 'tam-nhin'
+    label: 'Tin tức',
+    path: '',
   },
   {
     label: 'Liên hệ',
-    path: 'lien-he'
-  }
+    path: 'contact',
+  },
 ];

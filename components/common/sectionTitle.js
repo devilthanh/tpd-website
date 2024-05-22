@@ -34,7 +34,7 @@ const SectionTitle = ({
 
         {title && (
           <h2
-            className={`mt-3 font-semibold leading-snug tracking-tight text-gray-800 lg:leading-tight ${titleSizes[titleSize]} dark:text-white`}
+            className={`mt-3 font-semibold leading-snug tracking-tight text-gray-800 lg:leading-tight ${titleSizes[titleSize]}`}
           >
             {title}
           </h2>
@@ -42,7 +42,7 @@ const SectionTitle = ({
       </div>
       {children && (
         <div
-          className={`mt-12 text-gray-600 font-normal text-lg lg:text-xl xl:text-xl dark:text-gray-300 ${
+          className={`mt-12 text-gray-600 font-normal text-lg lg:text-xl xl:text-xl ${
             variants[variant].desc || ''
           }`}
         >

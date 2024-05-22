@@ -14,14 +14,14 @@ const Navbar = () => {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto mr-5">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-3xl font-bold text-gray-500 dark:text-gray-100 max-w-[112px]">
-                    <Image src={LogoImage} alt="N" width={112} height={32} />
+                  <span className="flex items-center space-x-2 text-3xl font-bold text-gray-500 max-w-[112px]">
+                    <Image src={LogoImage} alt="TPD" width={112} height={32} />
                   </span>
                 </Link>
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -51,7 +51,7 @@ const Navbar = () => {
                         key={index}
                         href={`#${item.path}`}
                         scroll={false}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
                       >
                         {item.label}
                       </Link>

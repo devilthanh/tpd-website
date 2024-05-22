@@ -33,18 +33,16 @@ const Letter = ({ data }) => {
             <p className="mt-5 text-lg font-normal">Đoàn Trọng Nam Anh</p>
           </SectionTitle>
         </div>
-        <div className="flex items-center justify-center w-full">
-          <div>
-            <Image
-              src={data.image}
-              width="576"
-              height="auto"
-              alt="Benefits"
-              className={'object-cover mt-12 md:mt-0'}
-              placeholder="blur"
-              blurDataURL={data.image.src}
-            />
-          </div>
+        <div className="w-full">
+          <Image
+            src={data.image}
+            width="576"
+            height="auto"
+            alt="Benefits"
+            className={'w-full mt-12 md:mt-0'}
+            placeholder="blur"
+            blurDataURL={data.image.src}
+          />
         </div>
       </Container>
     </section>

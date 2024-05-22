@@ -6,6 +6,9 @@ import {
   ZapIcon,
   ChartBreakoutSquareIcon,
   MessageSmileCircleIcon,
+  Mail01Icon,
+  MarkerPi01,
+  PhoneIcon,
 } from './assets';
 
 const benefitOne = {
@@ -27,24 +30,42 @@ const benefitTwo = {
     {
       title: 'TÍN',
       desc: 'Luôn thực hiện đúng cam kết và không ngừng nỗ lực làm tốt hơn cả sự mong đợi để tạo dựng niềm tin của khách hàng.',
-      icon: <Image src={MessageChatCircleIcon} />,
+      icon: <Image src={MessageChatCircleIcon} alt="TDP" />,
     },
     {
       title: 'TÂM',
       desc: 'Luôn duy trì đạo đức kinh doanh; cân bằng quyền lợi giữa Khách hàng – Cộng đồng và Doanh nghiệp.',
-      icon: <Image src={ZapIcon} />,
+      icon: <Image src={ZapIcon} alt="TDP" />,
     },
     {
       title: 'TRÍ',
       desc: 'Luôn coi trọng và khuyến khích sự sáng tạo, đề cao tinh thần học hỏi để mang đến các sản phẩm và dịch vụ có gía trị cao hơn cho khách hàng.',
-      icon: <Image src={ChartBreakoutSquareIcon} />,
+      icon: <Image src={ChartBreakoutSquareIcon} alt="TDP" />,
     },
     {
       title: 'NHÂN',
       desc: 'Luôn coi người lao động là tài sản quý giá nhất, hướng tới xây dựng môi trường làm việc thân thiện, chia sẻ trách nhiệm và khuyến khích sự cống hiến.',
-      icon: <Image src={MessageSmileCircleIcon} />,
+      icon: <Image src={MessageSmileCircleIcon} alt="TDP" />,
     },
   ],
 };
 
-export { benefitOne, benefitTwo };
+const contacts = [
+  {
+    icon: Mail01Icon,
+    title: 'Email',
+    desc: 'huydq@tpd.vn',
+  },
+  {
+    icon: MarkerPi01,
+    title: 'Trụ sở chính',
+    desc: 'Nhà số 6, C11, Ngõ 44, Đường Nguyễn Cơ Thạch, Phường Mỹ Đình 1, Quận Nam Từ Liêm, Thành phố Hà Nội, Việt Nam',
+  },
+  {
+    icon: PhoneIcon,
+    title: 'Số điện thoại',
+    desc: '0989.190.120',
+  },
+];
+
+export { benefitOne, benefitTwo, contacts };
