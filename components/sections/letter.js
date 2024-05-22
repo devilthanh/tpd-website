@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import Container from '@/components/common/container';
 import SectionTitle from '@/components/common/sectionTitle';
+import { motion } from 'framer-motion';
 
 const Letter = ({ data }) => {
   return (
@@ -33,7 +34,26 @@ const Letter = ({ data }) => {
             <p className="mt-5 text-lg font-normal">Đoàn Trọng Nam Anh</p>
           </SectionTitle>
         </div>
-        <div className="w-full">
+        <motion.div
+          className="w-full"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          variants={{
+            offscreen: {
+              x: 300,
+              opacity: 0,
+            },
+            onscreen: {
+              x: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.8,
+                delay: 0.3,
+              },
+            },
+          }}
+        >
           <Image
             src={data.image}
             width="576"
@@ -43,7 +63,7 @@ const Letter = ({ data }) => {
             placeholder="blur"
             blurDataURL={data.image.src}
           />
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

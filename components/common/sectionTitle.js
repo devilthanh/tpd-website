@@ -1,5 +1,64 @@
 import React from 'react';
 import Container from './container';
+import { motion } from 'framer-motion';
+
+const motionsTitle = {
+  default: {
+    offscreen: {
+      x: -300,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  },
+  vertical: {
+    offscreen: {
+      y: 300,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  },
+};
+
+const motionsChild = {
+  default: {
+    offscreen: {
+      x: -300,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  },
+  vertical: {
+    offscreen: {
+      y: 300,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  },
+};
 
 const variants = {
   vertical: { container: 'flex flex-col' },
@@ -22,10 +81,18 @@ const SectionTitle = ({
   variant = 'vertical',
   titleSize = '3xl',
   className = '',
+  motionTitle = 'default',
+  motionChild = 'default',
 }) => {
   return (
     <Container className={`${variants[variant].container} ${className}`}>
-      <div className={`${variants[variant].title || ''}`}>
+      <motion.div
+        className={`${variants[variant].title || ''}`}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        variants={motionsTitle[motionTitle]}
+      >
         {pretitle && (
           <div className="font-semibold tracking-wider text-primary-700">
             {pretitle}
@@ -39,15 +106,19 @@ const SectionTitle = ({
             {title}
           </h2>
         )}
-      </div>
+      </motion.div>
       {children && (
-        <div
+        <motion.div
           className={`mt-12 text-gray-600 font-normal text-lg lg:text-xl xl:text-xl ${
             variants[variant].desc || ''
           }`}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          variants={motionsChild[motionChild]}
         >
           {children}
-        </div>
+        </motion.div>
       )}
     </Container>
   );

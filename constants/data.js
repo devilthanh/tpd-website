@@ -68,4 +68,19 @@ const contacts = [
   },
 ];
 
-export { benefitOne, benefitTwo, contacts };
+const solutions = [
+  {
+    title: 'Thiết kế, triển khai hạ tầng CNTT',
+    desc: 'Với giải pháp Thiết kế và Triển khai Hạ tầng CNTT của chúng tôi,chúng tôi cam kết mang đến cho bạn một hệ thống CNTT mạnh mẽ, linhhoạt và hiệu quả.',
+  },
+  {
+    title: 'Tư vấn đầu tư ứng dụng CNTT',
+    desc: 'Giải pháp Tư vấn Đầu tư Ứng dụng CNTT của chúng tôi nhằm mục đích hỗ trợ khách hàng trong việc tối ưu hóa đầu tư vào công nghệ thông tin và áp dụng các ứng dụng CNTT một cách hiệu quả nhất.',
+  },
+  {
+    title: 'Thiết kế, triển khai giải pháp chuyển đổi số',
+    desc: 'Giải pháp Thiết kế và Triển khai Chuyển đổi Số của chúng tôi nhằm mục đích hỗ trợ các tổ chức trong việc chuyển đổi từ mô hình kinh doanh truyền thống sang mô hình số hóa, tận dụng các công nghệ mới nhất để cải thiện hiệu suất và tăng cường cạnh tranh.',
+  },
+];
+
+export { benefitOne, benefitTwo, contacts, solutions };

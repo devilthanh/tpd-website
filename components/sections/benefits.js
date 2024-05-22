@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import React from 'react';
 import Container from '@/components/common/container';
 import SectionTitle from '@/components/common/sectionTitle';
+import { motion } from 'framer-motion';
 
 const Benefits = (props) => {
   const { data } = props;
@@ -16,7 +16,12 @@ const Benefits = (props) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between w-full mt-16 gap-6">
           {data.bullets.map((item, index) => (
-            <Benefit key={index} title={item.title} icon={item.icon}>
+            <Benefit
+              key={index}
+              title={item.title}
+              icon={item.icon}
+              offset={index}
+            >
               {item.desc}
             </Benefit>
           ))}
@@ -28,7 +33,25 @@ const Benefits = (props) => {
 
 function Benefit(props) {
   return (
-    <div className="px-6 pt-6 bg-gray-50 pb-12 sm:pb-20 xl:pb-28 col-span-1">
+    <motion.div
+      className="px-6 pt-6 bg-gray-50 pb-12 sm:pb-20 xl:pb-28 col-span-1"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+      variants={{
+        offscreen: {
+          y: 300,
+          opacity: 0,
+        },
+        onscreen: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5 + props.offset / 3,
+          },
+        },
+      }}
+    >
       <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-primary-600 rounded-[10px] w-11 h-11 ">
         {React.cloneElement(props.icon, {
           className: 'w-7 h-7',
@@ -40,7 +63,7 @@ function Benefit(props) {
         </h4>
         <p className="mt-2 text-gray-600">{props.children}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

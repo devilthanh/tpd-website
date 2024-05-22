@@ -2,12 +2,21 @@ import Image from 'next/image';
 import Container from '@/components/common/container';
 import Button from '@/components/common/button';
 import { HeroImage } from '@/constants/assets';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section id="hero" className="w-full pt-16 pb-24">
       <Container className="flex flex-col items-center md:flex-row max-w-7xl md:gap-x-8 mx-auto px-8">
-        <div className="w-full">
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, translateX: -300 }}
+          animate={{ opacity: 1, translateX: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
+        >
           <Image
             src={HeroImage}
             width="592"
@@ -17,8 +26,16 @@ const Hero = () => {
             loading="eager"
             placeholder="blur"
           />
-        </div>
-        <div className="flex items-center w-full mt-12 md:mt-0">
+        </motion.div>
+        <motion.div
+          className="flex items-center w-full mt-12 md:mt-0"
+          initial={{ opacity: 0, translateX: 300 }}
+          animate={{ opacity: 1, translateX: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
+        >
           <div className="max-w-2xl mb-8">
             <h1 className="text-4xl font-semibold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight">
               Định hình tương lai số hóa cùng TPD
@@ -31,7 +48,7 @@ const Hero = () => {
             </p>
             <Button text="Liên hệ ngay" />
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

@@ -29,6 +29,7 @@ const Home = () => {
           variant="horizontal"
           titleSize="5xl"
           className="max-w-7xl py-24 mx-auto px-8"
+          motionChild="vertical"
         >
           Đem các sản phẩm và dịch vụ công nghệ chất lượng cao tới khách hàng,
           cộng đồng và xã hội. Góp phần tích cực vào sự phát triển chung của nền
@@ -42,6 +43,7 @@ const Home = () => {
           variant="horizontal"
           titleSize="5xl"
           className="max-w-7xl lg:pt-24 pt-0 pb-24 mx-auto px-8"
+          motionChild="vertical"
         >
           Trong 10 năm, phấn đấu trở thành một công ty Công nghệ thông tin uy
           tín tại Việt Nam với 200 nhân viên và doanh thu đạt 500 tỷ Đồng.
