@@ -8,6 +8,7 @@ import Letter from '@/components/sections/letter';
 import Benefits from '@/components/sections/benefits';
 import Solution from '@/components/sections/solution';
 import Contact from '@/components/sections/contact';
+import Footer from '@/components/footer/footer';
 
 const Home = () => {
   return (
@@ -52,6 +53,7 @@ const Home = () => {
       <Benefits imgPos="right" data={benefitTwo} />
       <Solution />
       <Contact />
+      <Footer />
       <PopupWidget />
     </>
   );

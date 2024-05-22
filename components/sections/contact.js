@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section className="w-full bg-gray-50" id="contact">
+    <section className="w-full bg-gray-50 scroll-mt-20" id="contact">
       <Container className="max-w-7xl px-8 mx-auto">
         <SectionTitle
           pretitle="Liên hệ"

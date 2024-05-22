@@ -6,7 +6,7 @@ import { solutions } from '@/constants/data';
 
 const Solution = () => {
   return (
-    <section className="w-full py-24" id="solution">
+    <section id="solution" className="w-full py-24 scroll-mt-20">
       <Container className="max-w-7xl m-auto px-8 grid md:grid-cols-3 gap-16">
         <motion.div
           className="col-span-1"

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Letter = ({ data }) => {
   return (
-    <section id="letter" className="w-full lg:pb-16 lg:pt-24">
+    <section id="letter" className="w-full lg:pb-16 lg:pt-24 scroll-mt-20">
       <Container className="flex max-w-7xl md:gap-16 flex-col items-center md:flex-row mx-auto px-8">
         <div className="w-full">
           <SectionTitle

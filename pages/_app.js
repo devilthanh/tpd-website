@@ -9,7 +9,7 @@ const inter = Inter({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={`overflow-hidden ${inter.className}`}>
+    <main className={`${inter.className}`}>
       <Component {...pageProps} />
     </main>
   );
