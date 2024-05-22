@@ -1,36 +1,27 @@
-import Link from 'next/link'
-import ThemeChanger from './DarkSwitch'
-import Image from 'next/image'
-import { Disclosure } from '@headlessui/react'
-import { navigation } from './navigation'
+import Link from 'next/link';
+import Image from 'next/image';
+import { Disclosure } from '@headlessui/react';
+import { navigation } from '@/contants/navigation';
+import { LogoImage } from '@/constants/assets';
 
 const Navbar = () => {
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+    <div className="w-full font-sans">
+      <nav className="container relative flex flex-wrap items-center py-5 px-8 mx-auto max-w-7xl">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
+              <div className="flex flex-wrap items-center justify-between w-full lg:w-auto mr-5">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-3xl font-bold text-gray-500 dark:text-gray-100">
-                    <span>
-                      <Image
-                        src="/img/logo.png"
-                        alt="N"
-                        width="48"
-                        height="48"
-                        className="w-12"
-                      />
-                    </span>
-                    <span>TPDigital</span>
+                  <span className="flex items-center space-x-2 text-3xl font-bold text-gray-500 max-w-[112px]">
+                    <Image src={LogoImage} alt="TPD" width={112} height={32} />
                   </span>
                 </Link>
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -60,7 +51,7 @@ const Navbar = () => {
                         key={index}
                         href={`#${item.path}`}
                         scroll={false}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
                       >
                         {item.label}
                       </Link>
@@ -86,7 +77,7 @@ const Navbar = () => {
                 <Link
                   href={`#${menu.path}`}
                   scroll={false}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                  className="inline-block px-4 py-2 text-base font-semibold text-gray-600 no-underline rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
                 >
                   {menu.label}
                 </Link>
@@ -94,13 +85,9 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <ThemeChanger />
-        </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
